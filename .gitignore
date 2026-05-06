@@ -2,28 +2,19 @@
 .env
 *.pem
 *.key
-*.p12
-oracle_wallet/
-
-# ── OCI / Phase 2 (not active in this deployment) ─────────────────────
-app/crypto_manager.py
-app/token_service.py
 
 # ── Python ────────────────────────────────────────────────────────────
 __pycache__/
 *.py[cod]
 *.pyo
-*.pyd
-.Python
 venv/
 env/
 .venv/
 *.egg-info/
 dist/
 build/
-.eggs/
 
-# ── Docker ────────────────────────────────────────────────────────────
+# ── Logs ──────────────────────────────────────────────────────────────
 *.log
 
 # ── IDE ───────────────────────────────────────────────────────────────
