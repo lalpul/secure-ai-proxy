@@ -14,6 +14,8 @@ from typing import Annotated
 import httpx
 from fastapi import Depends, FastAPI, HTTPException, Request, status
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse
 
 from app.config import Settings, get_settings
 from app.masking_engine import MaskingEngine
@@ -135,7 +137,7 @@ async def chat(
         body.session_id,
         len(masking_result.token_to_original),
         masking_result.pii_types_found,
-        body.prompt[:120] + ("…" if len(body.prompt) > 120 else ""),
+        f"[REDACTED - {len(body.prompt)} chars]",
         masking_result.masked_text[:120] + ("…" if len(masking_result.masked_text) > 120 else ""),
         "-" * 60,
     )
