@@ -5,7 +5,7 @@
 > A proxy that sits between your business and any external AI model.
 > Real PII never leaves your perimeter. The LLM sees only random tokens.
 
-🔗 **Live demo:** `http://51.105.241.83:8000/docs`
+🔗 **Live demo:** `https://mantta.io`
 
 ---
 
